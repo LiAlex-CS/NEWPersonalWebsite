@@ -1,0 +1,336 @@
+*{
+    padding:0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* 
+font-family: 'Muli', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+.jumbotron{
+    background-image:url("../imgs/toronto-3112508_1920.jpg") no-repeat center;
+    border-radius: 0;
+    color: whitesmoke;
+    background-size: cover;
+    padding:150px 0;
+}
+.p-pic{
+    border-radius: 50%;
+    border: 3px solid white;
+    padding: 4px;
+    height:250px;
+    width:250px;
+    margin-left: 30px;
+}
+
+.p-pic-small{
+    border-radius: 50%;
+    border: 3px solid white;
+    height:250px;
+    width:250px;
+    margin-top: 20px;
+}
+
+.background{
+    background-color: #dde1e7;
+    overflow-x: hidden;
+}
+
+.fade-in-start{
+    animation: transitionIn 2s;
+}
+
+@keyframes transitionIn{
+    from{
+        opacity:0;
+        transform: translateY(-20px)
+    }
+    to{
+        opacity:1;
+        transform: translateY(0)
+    }
+}
+
+.neumorphism{
+    background: #dde1e7;
+    box-shadow: -6px -6px 10px #ffffff73, 6px 6px 8px rgba(94,104, 121, .288);
+    border-radius: 10px;
+    padding: 0.5rem;
+    transition: box-shadow 0.5s ease-in-out;
+}
+.neumorphism-2{
+    background: #dde1e7;
+    box-shadow: 0;
+    border-radius: 10px;
+    padding: 0.5rem;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.neumorphism-2.appear{
+    box-shadow: -4px -4px 8px #ffffff73, 4px 4px 6px rgba(94,104, 121, .288);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+
+svg{
+    width: 90%;
+    animation: fill 0.5s ease forwards 6s;
+}
+
+#title-svg path:nth-child(1){
+    stroke-dasharray: 449.73358154296875;
+    stroke-dashoffset: 449.73358154296875;
+    animation: line-anim 2.5s ease forwards; 
+}
+#title-svg path:nth-child(2){
+    stroke-dasharray: 565.951416015625;
+    stroke-dashoffset: 565.951416015625;
+    animation: line-anim 2.5s ease forwards 0.2s; 
+}
+#title-svg path:nth-child(3){
+    stroke-dasharray: 549.06689453125;
+    stroke-dashoffset: 549.06689453125;
+    animation: line-anim 2.5s ease forwards 0.4s; 
+}
+#title-svg path:nth-child(4){
+    stroke-dasharray: 336.6719970703125;
+    stroke-dashoffset: 336.6719970703125;
+    animation: line-anim 2.5s ease forwards 0.6s; 
+}
+#title-svg path:nth-child(5){
+    stroke-dasharray: 385.0561218261719;
+    stroke-dashoffset: 385.0561218261719;
+    animation: line-anim 2.5s ease forwards 0.8s; 
+}
+#title-svg path:nth-child(6){
+    stroke-dasharray: 565.951416015625;
+    stroke-dashoffset: 565.951416015625;
+    animation: line-anim 2.5s ease forwards 1s; 
+}
+#title-svg path:nth-child(7){
+    stroke-dasharray: 297.21600341796875;
+    stroke-dashoffset: 297.21600341796875;
+    animation: line-anim 2.5s ease forwards 1.2s; 
+}
+#title-svg path:nth-child(8){
+    stroke-dasharray: 226.9440460205078;
+    stroke-dashoffset: 226.9440460205078;
+    animation: line-anim 2.5s ease forwards 1.4s; 
+}
+#title-svg path:nth-child(9){
+    stroke-dasharray: 565.9514770507812;
+    stroke-dashoffset: 565.9514770507812;
+    animation: line-anim 2.5s ease forwards 1.6s; 
+}
+#title-svg path:nth-child(10){
+    stroke-dasharray: 111.55426025390625;
+    stroke-dashoffset: 111.55426025390625;
+    animation: line-anim 2.5s ease forwards 1.8s; 
+}
+#title-svg path:nth-child(11){
+    stroke-dasharray: 490.29217529296875;
+    stroke-dashoffset: 490.29217529296875;
+    animation: line-anim 2.5s ease forwards 2s; 
+}
+#title-svg path:nth-child(12){
+    stroke-dasharray: 297.21600341796875;
+    stroke-dashoffset: 297.21600341796875;
+    animation: line-anim 2.5s ease forwards 2.2s; 
+}
+#title-svg path:nth-child(13){
+    stroke-dasharray: 463.9361572265625;
+    stroke-dashoffset: 463.9361572265625;
+    animation: line-anim 2.5s ease forwards 2.4s; 
+}
+#title-svg path:nth-child(14){
+    stroke-dasharray: 477.3724060058594;
+    stroke-dashoffset: 477.3724060058594;
+    animation: line-anim 2.5s ease forwards 2.6s; 
+}
+#title-svg path:nth-child(15){
+    stroke-dasharray: 297.21600341796875;
+    stroke-dashoffset: 297.21600341796875;
+    animation: line-anim 2.5s ease forwards 2.8s; 
+}
+#title-svg path:nth-child(16){
+    stroke-dasharray: 226.9359893798828;
+    stroke-dashoffset: 226.9359893798828;
+    animation: line-anim 2.5s ease forwards 3s; 
+}
+
+@keyframes line-anim{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes fill{
+    from{
+        fill:transparent;
+    }
+    to{
+        fill: white;
+    }
+}
+
+.carousel-img{
+    border-radius: 10px;
+    transition: 150ms ease-in;
+}
+
+.carousel-img:hover{
+    transform:scale(1.02);
+    transition: 150ms ease-in;
+}
+
+.carousel-item{
+    padding: 3%;
+}
+
+
+.carousel-caption{
+    position: absolute;
+    left:30px;
+    right:30px;
+    bottom:30px;
+    top:80%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: black;
+}
+
+.carousel-indicators{
+    position: absolute;
+    bottom: 5%;
+}
+
+.logo{
+    width:50px;
+    height:50px;
+    transition: 150ms ease-in;
+}
+
+.logo:hover{
+    transform:scale(1.15);
+    transition: 150ms ease-in;
+}
+
+.navbar-background{
+    background:transparent;
+    padding:0;
+    border-bottom: transparent;
+    transition: 300ms ease-in-out;
+}
+
+.navbar-toggler{
+    margin-left: 30px;
+    background: url('../imgs/navbar.png') no-repeat center;
+    background-size: cover;
+}
+
+.navbar-toggler:hover{
+    background-color: rgb(53, 53, 53);
+}
+
+.nav-item{
+    height:100%;
+    padding: 0;
+}
+
+.nav-link{
+    color: white;
+    margin: 0 20px;
+
+}
+
+.nav-link:hover{
+    color: grey;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 10px black; 
+    background: rgb(61, 61, 61);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(112, 112, 112);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(156, 156, 156);
+    box-shadow: 0 2px 5px 1px rgb(150, 150, 150), 0 -2px 5px 1px rgb(150, 150, 150);
+}
+
+::-webkit-scrollbar-button{
+    height: 15px;
+    background: rgb(20, 20, 20);
+    box-shadow: inset 0 0 5px black;
+    transition: 1s ease-in;
+}
+
+::-webkit-scrollbar-button:hover{
+    background: rgb(51, 51, 51);
+    transition: 1s ease-in;
+}
+
+.paragraph-title{
+    font-size: 3em;
+    font-weight: 1000;
+}
+
+.paragraph{
+    font-size: 1.2em;
+}
+
+.second-wrapper{
+    width:100%;
+    height:850px;
+    background-image: url("../imgs/street.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.second-wrapper-title{
+    font-size: 300%;
+    width:100%;
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+.footer-bottom{
+    background: rgb(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 1);
+    width: 100%;
+}
+
+.footer-bottom-title{
+
+}
+
+.fa{
+    color:white;
+    margin: 0 30px;
+    font-size: 30px;
+}
+
+.fa:hover{
+    color: rgb(138, 138, 138);
+}
+
+.fade-on-scroll{
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-on-scroll.appear{
+    opacity: 1;
+}

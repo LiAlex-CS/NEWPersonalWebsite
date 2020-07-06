@@ -1,0 +1,19 @@
+{
+  "name": "newpersonalwebsite",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "index.html",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.5.1",
+    "popper": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Zishu Li",
+  "license": "ISC"
+}

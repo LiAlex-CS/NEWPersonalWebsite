@@ -7,8 +7,8 @@ const options = {
     rootMargin: "0px 0px 20px 0px"
 }
 
-const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) =>{
-    entries.forEach(entry =>{
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+    entries.forEach(function(entry){
         if(!entry.isIntersecting){
             if(entry.target.classList.contains('appear'));
                 // console.log(entry.target.getBoundingClientRect().top, window.scrollY);
@@ -22,7 +22,7 @@ const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) =>{
     })
 }, options);
 
-sections.forEach(section =>{
+sections.forEach(function(section){
     appearOnScroll.observe(section);
 })
 

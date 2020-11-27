@@ -1,5 +1,5 @@
 const headerImgState = Math.floor(Math.random()*2);
-let initialListScrollHeight = document.getElementById('scroll-list-container')? document.getElementById('scroll-list-container').scrollHeight : null;
+var initialListScrollHeight = document.getElementById('scroll-list-container')? document.getElementById('scroll-list-container').scrollHeight : null;
 const constInitialListScrollHeight = initialListScrollHeight;
 const numListItems = document.getElementById('scroll-list')? document.getElementById('scroll-list').getElementsByTagName("li").length: null;
 
@@ -7,7 +7,7 @@ const numListItems = document.getElementById('scroll-list')? document.getElement
 
 function parallax_function(){
     const parallax = document.getElementById('parallax');
-    let offset = window.pageYOffset;
+    var offset = window.pageYOffset;
     if(headerImgState === 1)
         parallax.style.backgroundPositionY = offset * 0.7 + -265 + "px";
     else
@@ -15,7 +15,7 @@ function parallax_function(){
 }
 
 function navbar_function(){
-    let offset = window.pageYOffset;
+    var offset = window.pageYOffset;
     if(offset === 0 && window.innerWidth > 575){
         document.getElementById('navbar-background').style.background = "transparent";
         document.getElementById('navbar-background').style.borderBottom = "transparent";
@@ -31,18 +31,18 @@ function duplicate_list(){
     const listItemArray = scrollList.getElementsByTagName("li"); 
     const scrollListContainer = document.getElementById('scroll-list-container');
     const clonedListItemArray = [];
-    for(let index = 0; index < numListItems; index++){
+    for(var index = 0; index < numListItems; index++){
         clonedListItemArray.push(listItemArray[index].cloneNode(true));
     }
 
     if(scrollListContainer.scrollHeight - scrollListContainer.scrollTop === scrollListContainer.clientHeight){
-        for(let index = 0; index < clonedListItemArray.length; index++){
+        for(var index = 0; index < clonedListItemArray.length; index++){
             scrollList.appendChild(clonedListItemArray[index]);
         }
     }
 
     if(scrollListContainer.scrollTop >= initialListScrollHeight){
-        for(let index = 0;  index < numListItems; index++){
+        for(var index = 0;  index < numListItems; index++){
             document.querySelector('.scroll-item').remove();
         }
     }
@@ -54,7 +54,7 @@ function duplicate_list(){
 //-index.html
 if(document.URL.includes("index.html")){
 
-    const backgroundImg = () =>{
+    function backgroundImg(){
         if(headerImgState === 1){
         document.querySelector('.jumbotron.index').style.background = "url('../imgs/toronto-3112508_1920.jpg') no-repeat center ";
         }
@@ -63,7 +63,7 @@ if(document.URL.includes("index.html")){
         }
     }
 
-    ['scroll','resize'].forEach(evt => {
+    ['scroll','resize'].forEach(function(evt){
         window.addEventListener(evt, parallax_function);
         window.addEventListener(evt, navbar_function);
         }
@@ -73,14 +73,14 @@ if(document.URL.includes("index.html")){
 //-webdev.html
 if(document.URL.includes("webdev.html")){
 
-    ['scroll','resize'].forEach(evt => {
+    ['scroll','resize'].forEach(function(evt){
         window.addEventListener(evt, navbar_function);
         }
     );
     const scrollListContainer = document.getElementById('scroll-list-container');
     scrollListContainer.addEventListener('scroll', duplicate_list);
     
-    let passiveScroll = setInterval(() => {
+    var passiveScroll = setInterval(function(){
         const scrollListContainer = document.getElementById('scroll-list-container');
         scrollListContainer.scrollTop ++;
     }, 45);
@@ -90,7 +90,7 @@ if(document.URL.includes("webdev.html")){
     }
     
     function mouseOut(){
-        passiveScroll = setInterval(() => {
+        passiveScroll = setInterval(function(){
             const scrollListContainer = document.getElementById('scroll-list-container');
             scrollListContainer.scrollTop ++;
         }, 45);
@@ -123,17 +123,17 @@ if(document.URL.includes("aboutMe.html")){
 
     window.requestAnimationFrame(scrollPlay);
 
-    ['scroll','resize'].forEach(evt => {
+    ['scroll','resize'].forEach(function(evt){
         window.addEventListener(evt, navbar_function);
         }
     );
     
 }
 
-let prevScrollpos = window.pageYOffset;
+var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
-  let currentScrollPos = window.pageYOffset;
+  var currentScrollPos = window.pageYOffset;
 
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navbar-background").style.top = "0";

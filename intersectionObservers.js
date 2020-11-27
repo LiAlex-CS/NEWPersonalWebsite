@@ -10,11 +10,14 @@ const options = {
 const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) =>{
     entries.forEach(entry =>{
         if(!entry.isIntersecting){
+            if(entry.target.classList.contains('appear'));
+                // console.log(entry.target.getBoundingClientRect().top, window.scrollY);
+                entry.target.classList.remove('appear');
             return;
         }
         else{
             entry.target.classList.add('appear');
-            appearOnScroll.unobserve(entry.target);
+            // appearOnScroll.unobserve(entry.target);
         }
     })
 }, options);

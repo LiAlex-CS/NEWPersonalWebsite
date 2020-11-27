@@ -10,9 +10,14 @@
     "jquery": "^3.5.1",
     "popper": "^1.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "onchange": "^7.1.0",
+    "parallelshell": "^3.0.2",
+    "popper.js": "^1.12.9"
+  },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": ""
   },
   "author": "Zishu Li",
   "license": "ISC"

@@ -10,8 +10,8 @@ font-family: 'Poppins', sans-serif;
 font-family: 'Raleway', sans-serif;
 */
 
-.jumbotron{
-    background-image:url("../imgs/toronto-3112508_1920.jpg") no-repeat center;
+.jumbotron.index{
+    background:url("../imgs/toronto-3112508_1920.jpg") no-repeat center;
     border-radius: 0;
     color: whitesmoke;
     background-size: cover;
@@ -66,16 +66,16 @@ font-family: 'Raleway', sans-serif;
     box-shadow: 0;
     border-radius: 10px;
     padding: 0.5rem;
-    transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in;
 }
 
 .neumorphism-2.appear{
     box-shadow: -4px -4px 8px #ffffff73, 4px 4px 6px rgba(94,104, 121, .288);
-    transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in;
 }
 
 
-svg{
+#title-svg{
     width: 90%;
     animation: fill 0.5s ease forwards 6s;
 }
@@ -242,11 +242,13 @@ svg{
 .nav-link{
     color: white;
     margin: 0 20px;
+    transition: color 0.2s;
 
 }
 
 .nav-link:hover{
     color: grey;
+    transition: color 0.2s;
 }
 
 ::-webkit-scrollbar{
@@ -312,25 +314,250 @@ svg{
     width: 100%;
 }
 
-.footer-bottom-title{
-
-}
-
 .fa{
     color:white;
     margin: 0 30px;
     font-size: 30px;
+    transition: color 0.2s; 
 }
 
 .fa:hover{
     color: rgb(138, 138, 138);
+    transition: color 0.2s; 
 }
 
 .fade-on-scroll{
     opacity: 0;
-    transition: opacity 250ms ease-in;
+    transition: opacity 500ms ease-in;
 }
 
 .fade-on-scroll.appear{
     opacity: 1;
+}
+
+/* Webdev Page ///////////////////////////////////////////////////////////////////////////////////////*/
+
+.background-2{
+    background: rgb(26, 26, 26);
+    color:  whitesmoke;
+}
+
+.jumbotron.webdev{
+    background-image: url("../imgs/coding-background.jpg");
+    background-size: cover;
+    border-radius: 0;
+    color: whitesmoke;
+    padding:150px 0;
+    position: relative;
+}
+
+.cover-overlay{
+    top: 0;
+    background:linear-gradient(to right, rgb(236, 126, 0), black);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.title{
+    font-size: 60px;
+    font-family: 'Anonymous Pro', monospace;
+    overflow: hidden;
+    border-right: 5px solid whitesmoke;
+    white-space: nowrap;
+}
+
+.title-2{
+    font-size: 50px;
+    font-family: 'Anonymous Pro', monospace;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.title-caption{
+    max-width: 600px;
+    white-space: normal;
+}
+
+
+.anim-typewriter{
+    animation: typewriter 3s steps(15) 1.2s 1 normal both,
+    blinkTextCursor 600ms steps(15) infinite normal;
+}
+
+@keyframes typewriter {
+    from{
+        width: 0;
+    }
+    to{
+        width: 495px;
+    }
+}
+@keyframes blinkTextCursor {
+    from{
+        border-right-color:  whitesmoke;
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
+
+.anim-delayed-fade-in{
+    animation: delayedFade 1s linear 5s both;
+    opacity: 0;
+}
+
+@keyframes delayedFade{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.intro-content{
+    margin-top: 150px;
+}
+
+.seperation{
+    background:rgb(224, 224, 224);
+    border-radius: 10%;
+    width: 6px;
+    height: 320px;
+    box-shadow: 0px 0px 5px 5px rgb(121, 121, 121);
+}
+
+.scroll-list-container{
+    height: 400px;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+
+.scroll-list-container::-webkit-scrollbar{
+    display:none;
+}
+
+.scroll-list{
+    list-style-type: none;
+}
+
+.scroll-item{
+    color: rgb(202, 108, 0);
+    font-size: 40px;
+    font-weight: 550;
+    text-align: center;
+    transition: color 0.5s, font-size 0.5s;
+}
+
+.scroll-item:hover{
+    color: orange;
+    font-size: 50px;
+    transition: color 0.5s, font-size 0.5s;
+}
+
+.media-container{
+    margin: 200px 0 200px 0;
+}
+
+.media-image-react{
+    width: 270px;
+}
+
+.media-image-node{
+    width: 200px;
+}
+
+.media-image-python{
+    width: 190px;
+    margin-right: 70px;
+}
+
+/* aboutme.html */
+body {
+    overflow-x: hidden;
+    background-color: rgb(15,15,15);
+}
+
+.aboutme-background-video{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    width: 2000px;
+    z-index: -1;
+}
+
+.aboutme-header{
+    margin-top: 300px;
+    margin-bottom: 100px;
+}
+
+.aboutme-title{
+    font-size: 150px;
+}
+
+.aboutme-subsection{
+    margin-top: 200px;
+    margin-bottom:200px;
+}
+
+.subsection-text{
+    background-color: whitesmoke;;
+    padding: 50px 70px 50px 70px;
+    border-radius: 30px;
+}
+
+.subsection-text h1 {
+    font-size: 70px;
+}
+
+/* Under Development */
+
+.under-development{
+    color:  whitesmoke;
+}
+
+.under-development-container{
+    height: 300px;
+    margin-bottom: 50px;
+}
+
+.gear-set-svg{
+    width:100%;
+}
+
+#Big-Gear{
+    animation: turningCW 9s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#Small-Gear{
+    animation: turningCCW 9s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes turningCW {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes turningCCW {
+    from {
+        transform: rotateZ(360deg);
+    }
+    to {
+        transform: rotateZ(0deg);
+    }
 }
